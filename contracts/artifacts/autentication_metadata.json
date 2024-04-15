@@ -1,0 +1,72 @@
+{
+	"compiler": {
+		"version": "0.8.25+commit.b61c2a91"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [],
+				"name": "autenticate",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"name": "users",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/Autentication.sol": "autentication"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/Autentication.sol": {
+			"keccak256": "0xd8f0ad3b13fd7db43dc38e73d585d884f9d4067424cc0d5546fceeae52df9730",
+			"license": "GPL-3.0",
+			"urls": [
+				"bzz-raw://347808b1a3c1d3aa0c1a056bf4e7944476b979d302e9eba49f1364d677a649a5",
+				"dweb:/ipfs/QmQGEsBzuPDFMFTqbnb32TpRSTxoPSWMdP3KNk23aSMa96"
+			]
+		}
+	},
+	"version": 1
+}
