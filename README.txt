@@ -1,28 +1,33 @@
-REMIX DEFAULT WORKSPACE
+# Ethereum Identity Contract
 
-Remix default workspace is present when:
-i. Remix loads for the very first time 
-ii. A new workspace is created with 'Default' template
-iii. There are no files existing in the File Explorer
+This Solidity smart contract provides functionality for managing user identities and controlling access to both basic and personal information on the Ethereum blockchain.
 
-This workspace contains 3 directories:
+## Description
 
-1. 'contracts': Holds three contracts with increasing levels of complexity.
-2. 'scripts': Contains four typescript files to deploy a contract. It is explained below.
-3. 'tests': Contains one Solidity test file for 'Ballot' contract & one JS test file for 'Storage' contract.
+The `Identity` contract allows users to register their basic and personal information securely. It implements a role-based access system to ensure that only authorized users can access specific information.
 
-SCRIPTS
+## Addressed Challenges
 
-The 'scripts' folder has four typescript files which help to deploy the 'Storage' contract using 'web3.js' and 'ethers.js' libraries.
+### 1. Authentication and Authorization
 
-For the deployment of any other contract, just update the contract's name from 'Storage' to the desired contract and provide constructor arguments accordingly 
-in the file `deploy_with_ethers.ts` or  `deploy_with_web3.ts`
+The contract ensures that users are authenticated and authorized before accessing information. It distinguishes between basic and personal users, granting access based on predefined roles.
 
-In the 'tests' folder there is a script containing Mocha-Chai unit tests for 'Storage' contract.
+### 2. Data Privacy
 
-To run a script, right click on file name in the file explorer and click 'Run'. Remember, Solidity file must already be compiled.
-Output from script will appear in remix terminal.
+To address the challenge of data privacy on the blockchain, the contract restricts access to information based on user roles. Basic users can only access basic information, while personal users have access to both basic and personal information.
 
-Please note, require/import is supported in a limited manner for Remix supported modules.
-For now, modules supported by Remix are ethers, web3, swarmgw, chai, multihashes, remix and hardhat only for hardhat.ethers object/plugin.
-For unsupported modules, an error like this will be thrown: '<module_name> module require is not supported by Remix IDE' will be shown.
+## Possible Solutions
+
+- **External Encryption/Decryption**: Data can be encrypted off-chain before storage and decrypted only by authorized users.
+  
+- **Hash Comparison**: Hashes can be compared to verify data integrity without revealing its content.
+  
+- **Off-Chain Services**: Services like ChainLink can be used for secure interaction with external data sources.
+
+## Usage
+
+1. **Deployment**: Deploy the contract on the Ethereum network.
+
+2. **User Registration**: The owner can register new users, specifying their type (basic or personal).
+
+3. **Accessing Information**: Authenticated users can access information based on their permissions.
